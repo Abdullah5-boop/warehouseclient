@@ -1,0 +1,12 @@
+.navheader p{
+    color:rgb(223, 199, 199)
+}
+.navheader :hover p {
+       color: rgb(0, 0, 0);
+}
+Link{
+    text-decoration: none;
+}
+.navbkgrd{
+    background-color:#A13B25 
+}

@@ -1,5 +1,24 @@
-.App {
-  text-align: center;
+html{
+  height: 100%;
+
+}
+body{
+  /* min-height: 100vh;
+  display: flex;
+  flex-direction: column; */
+  min-height: 100vh;
+  padding-bottom: 400px;
+  position: relative;
+
+}
+.footerformating{
+/* margin-top: auto !important; */
+/* position: relative;
+bottom: auto; */
+/* margin-top: auto; */
+position: absolute;
+bottom: 0px;
+width: 100vw;
 }
 
 .App-logo {

@@ -1,0 +1,13 @@
+.cards{
+    position: relative;
+}
+.cardbtn{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /* padding: 10px; */
+}
+img{
+    width: 100px;
+    height: 200px;
+}
