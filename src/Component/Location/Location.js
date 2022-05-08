@@ -28,7 +28,7 @@ const Location = () => {
                     <h3 className='mt-5 fs-4'>Contact  Our customer center</h3>
                     <p>
                         It may sound obvious, but no warehouse operations are perfect. You may end up with a lot of unused stock, run out of packing materials early on, or experience order volatility with a particular product.
-                        Hi Dan, it looks like you had an issue with your order. Sorry about that. We’re working on it right now and will send you a msg once it's resolved.  Customer Service@UH
+                        Hi Dan, it looks like you had an issue with your order. Sorry about that. Were working on it right now and will send you a msg once it's resolved.  Customer Service@UH. thank you
 
                     </p> <br />
                     <h5 className='btn btn-warning' onClick={handleservice}>Our branch</h5>
