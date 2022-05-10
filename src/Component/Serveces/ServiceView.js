@@ -19,9 +19,11 @@ const ServiceView = (props) => {
                 <Card.Img variant="top" src={Product.img} />
                 <Card.Body>
                     <Card.Title>{Product.Carmake}</Card.Title>
-                    <Card.Text>
+                    <Card.Text className='pb-3'>
        
-                 <div className='pb-3'><p>Quantity : <small>{Product.quantity}</small></p></div>
+                 <div ><p>Quantity : <small>{Product.quantity}</small></p></div>
+                 <div><p>salesman : <small>{Product.salesman}</small></p></div>
+                 <div><p>PricePerCar : $ <small>{Product.price}</small></p></div>
                     </Card.Text>
                     <Button className='cardbtn w-100' onClick={HandleUpdate} variant="primary">Update</Button>
                 </Card.Body>

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 // import './servicestyle.css';
 const Shopview = (props) => {
     const Product = props.Data;
-    const handleid=props.handleid;
+    const handleid = props.handleid;
     const navigate = useNavigate()
     const HandleADD = () => {
         console.log(Product._id)
@@ -18,10 +18,13 @@ const Shopview = (props) => {
                 <Card.Img variant="top" src={Product.img} />
                 <Card.Body>
                     <Card.Title>{Product.Carmake}</Card.Title>
-                    <Card.Text>
-                        <div className='pb-3'><p>Quantity : <small>{Product.quantity}</small></p></div>
+                    <Card.Text className='pb-3'>
+                        {/* <div className='pb-3'><p>Quantity : <small>{Product.quantity}</small></p></div> */}
+                        <div ><p>Quantity : <small>{Product.quantity}</small></p></div>
+                        <div><p>salesman : <small>{Product.salesman}</small></p></div>
+                        <div><p>PricePerCar : $ <small>{Product.price}</small></p></div>
                     </Card.Text>
-                    <Button className='cardbtn w-100' onClick={()=>{handleid(Product._id)}} variant="primary">ADD</Button>
+                    <Button className='cardbtn w-100' onClick={() => { handleid(Product._id) }} variant="primary">ADD</Button>
                 </Card.Body>
             </Card>
         </div>
