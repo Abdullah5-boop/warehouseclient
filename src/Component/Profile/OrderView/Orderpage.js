@@ -9,7 +9,7 @@ const Orderpage = () => {
     const email = useParams()
     //   console.log(email.email)
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${email.email}`)
+        fetch(`https://mysterious-savannah-05952.herokuapp.com/order/${email.email}`)
             .then(res => res.json())
             .then(data => setconsumer(data))
 

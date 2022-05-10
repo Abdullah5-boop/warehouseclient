@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import React, { useContext, useEffect, useState } from 'react';
+import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../App';
 import auth from '../../Firebase.init';
@@ -15,6 +16,7 @@ const Register = () => {
     const [confirm, setconfirm] = useState([]);
     const [errors, seterrors] = useState("");
     const navigate = useNavigate()
+    const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
     const handleSubmit = (event) => {
         event.preventDefault()
         // const email=event.target.Email.value;
@@ -30,6 +32,7 @@ const Register = () => {
                     .catch(error => {
                         console.log(error)
                     })
+                    sendEmailVerification()
             }
             finally {
                 navigate('/profile')

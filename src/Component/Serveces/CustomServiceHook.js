@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 
 const CustomServiceHook = () => {
-    const [products, setproducts]=useState([]);
+    const [products, setproducts] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/Service")
+        fetch("https://mysterious-savannah-05952.herokuapp.com/Service")
             .then(res => res.json())
             .then(data => setproducts(data))
-            .catch(error=>{console.log(error)})
+            .catch(error => { console.log(error) })
     }, [products])
     return [products, setproducts]
 }

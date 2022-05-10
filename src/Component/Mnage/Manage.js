@@ -10,8 +10,8 @@ const Manage = () => {
 
     const handleclick = (id) => {
         const user = product.find(data => data._id === id)
-        user.quantity = user.quantity -1
-        fetch("http://localhost:5000/manage",
+        user.quantity = user.quantity - 1
+        fetch("https://mysterious-savannah-05952.herokuapp.com/manage",
             {
                 headers: { 'Content-Type': 'application/json' },
                 method: "put",
@@ -26,7 +26,7 @@ const Manage = () => {
         const user = product.find(data => data._id === id)
         user.quantity = user.quantity + add
         console.log(user)
-        fetch("http://localhost:5000/manage",
+        fetch("https://mysterious-savannah-05952.herokuapp.com/manage",
             {
                 headers: { 'Content-Type': 'application/json' },
                 method: "put",
@@ -35,7 +35,7 @@ const Manage = () => {
             .then(res => res.json())
             .then(data => console.log(data))
             .catch(error => { console.log(error) })
-           
+
 
     }
 
@@ -62,7 +62,7 @@ const Manage = () => {
                                     <td><button className='btn btn-light' onClick={() => { handleclick(data._id) }}>deliver</button></td>
                                     <td>
                                         <form className=''>
-                                            <input style={{width:"50px",margin:"5px"}} onChange={(event) => { setadd(parseInt(event.target.value)) }} type="number" name='ADD' />
+                                            <input style={{ width: "50px", margin: "5px" }} onChange={(event) => { setadd(parseInt(event.target.value)) }} type="number" name='ADD' />
                                             <h3 onClick={() => { handleAdd(data._id) }} className='btn btn-light'>Add</h3>
                                         </form>
                                     </td>

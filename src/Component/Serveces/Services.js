@@ -7,7 +7,7 @@ const Services = () => {
     const [product, setproduct] = useContext(ProductContext)
     const [products, setproducts] = CustomServiceHook()
     useEffect(() => {
-        fetch("http://localhost:5000/Service")
+        fetch("https://mysterious-savannah-05952.herokuapp.com/Service")
             .then(res => res.json())
             .then(data => {
                 setproducts(data)

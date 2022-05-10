@@ -33,7 +33,7 @@ const Profile = () => {
         }
         const allorder = { orders: orders, user: User.email }
         console.log(allorder)
-        fetch("http://localhost:5000/profile",
+        fetch("https://mysterious-savannah-05952.herokuapp.com/profile",
             {
                 headers: { 'Content-Type': 'application/json' },
                 method: "put",

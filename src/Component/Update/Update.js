@@ -7,9 +7,9 @@ const Update = () => {
 
     const [product, setproduct] = useState([])
     const [update, setupdate] = useState(false)
-    
+
     useEffect(() => {
-        fetch(`http://localhost:5000/update/${_id}`)
+        fetch(`https://mysterious-savannah-05952.herokuapp.com/update/${_id}`)
             .then(res => res.json())
             .then(data => setproduct(data))
     }, [])
@@ -20,7 +20,7 @@ const Update = () => {
         const img = event.target.img.value;
         const user = { carName, Quantity, img }
 
-        fetch(`http://localhost:5000/update/${_id}`,
+        fetch(`https://mysterious-savannah-05952.herokuapp.com/update/${_id}`,
             {
                 headers: {
 
@@ -34,7 +34,7 @@ const Update = () => {
             .catch(error => { console.log(error) })
     }
     const handleDelete = () => {
-        fetch(`http://localhost:5000/update/${_id}`,
+        fetch(`https://mysterious-savannah-05952.herokuapp.com/update/${_id}`,
             {
                 headers: {
 
@@ -45,7 +45,7 @@ const Update = () => {
             .then(res => res.json())
             .then(data => setupdate(true))
             .catch(error => { console.log(error) })
-            navigate('/Service')
+        navigate('/Service')
 
     }
 
