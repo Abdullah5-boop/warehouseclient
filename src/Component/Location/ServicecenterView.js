@@ -5,6 +5,7 @@ import ServiceView from '../Serveces/ServiceView';
 // import ServicecenterView from './ServicecenterView';
 const ServicecenterView = (props) => {
     const data=props.data
+    
     // console.log(data)
     return (
 

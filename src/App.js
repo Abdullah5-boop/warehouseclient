@@ -14,6 +14,9 @@ import RequireAuth from './RequireAuth';
 import Manage from './Component/Mnage/Manage';
 import Footer from './Component/Footer/Footer';
 import ServiceCenter from './Component/Location/ServiceCenter';
+import Orderpage from './Component/Profile/OrderView/Orderpage';
+import NoDevice from './Component/NodeviceFound/NoDevice';
+import Blog from './Component/Blog/Blog';
 
 export const UserContext = createContext("ring")
 export const ProductContext = createContext("product")
@@ -32,10 +35,13 @@ function App() {
             <Route path='/Login' element={<Login></Login>}></Route>
             <Route path='/register' element={<Register></Register>}></Route>
             <Route path='/profile' element={<Profile></Profile>}></Route>
-            <Route path='/Service' element={<Services></Services>}></Route>
+            <Route path='/Service' element={<Services></Services> }></Route>
             <Route path='/manage' element={<Manage></Manage>}></Route>
             <Route path='/update/:_id' element={<RequireAuth><Update></Update></RequireAuth>}></Route>
             <Route path='/customerservice'element={<ServiceCenter></ServiceCenter>}></Route>
+            <Route path='/order/:email' element={<Orderpage></Orderpage>}></Route>
+            <Route path='/blog' element={<Blog></Blog>}></Route>
+            <Route path='*'element={<NoDevice></NoDevice>}></Route>
           </Routes>
           
         </div>

@@ -27,7 +27,7 @@ const Header = () => {
                 {['xxl'].map((expand) => (
                     <Navbar key={expand} expand={expand} className="mb-3 p-2 navbkgrd mb-3">
                         <Container fluid>
-                            <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+                            <Navbar.Brand href="#">SuperCarWareHouse</Navbar.Brand>
                             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                             <Navbar.Offcanvas
                                 id={`offcanvasNavbar-expand-${expand}`}
@@ -36,7 +36,7 @@ const Header = () => {
                             >
                                 <Offcanvas.Header closeButton>
                                     <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                                        Offcanvas
+                                        SuperCarWareHouse
                                     </Offcanvas.Title>
                                 </Offcanvas.Header>
                                 <Offcanvas.Body>
@@ -50,8 +50,12 @@ const Header = () => {
                                             {/* <Nav.Link className='fs-5 mx-3 font-weight-bold' href="/profile"><p>profile</p> </Nav.Link> */}
                                         </div>
                                         <div className="navheader mx-3">
-                                            <Link style={{ textDecoration: "none" }} className='fs-5 mx-2 font-weight-bold' to="/profile"><p>Profile</p> </Link>
-                                            {/* <Nav.Link className='fs-5 mx-3 font-weight-bold' href="/profile"><p>profile</p> </Nav.Link> */}
+                                            <Link style={{ textDecoration: "none" }} className='fs-5 mx-2 font-weight-bold' to="/profile"><p>Shop</p> </Link>
+                                            
+                                        </div>
+                                        <div className="navheader mx-3">
+                                            <Link style={{ textDecoration: "none" }} className='fs-5 mx-2 font-weight-bold' to="/Blog"><p>Blog</p> </Link>
+                                            
                                         </div>
                                         <div className="navheader mx-3">
                                             <Link style={{ textDecoration: "none" }} className='fs-5 m-1 font-weight-bold' to="/register"><p>Register</p> </Link>

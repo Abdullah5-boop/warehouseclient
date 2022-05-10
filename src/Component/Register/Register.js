@@ -48,6 +48,7 @@ const Register = () => {
                 const uid = User.uid;
                 console.log(uid)
                 setuser(User)
+                navigate('/profile')
 
             } else {
 
