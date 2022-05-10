@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Update = () => {
+    const navigate = useNavigate()
     const { _id } = useParams()
 
     const [product, setproduct] = useState([])
     const [update, setupdate] = useState(false)
+    
     useEffect(() => {
         fetch(`http://localhost:5000/update/${_id}`)
             .then(res => res.json())
@@ -32,7 +34,19 @@ const Update = () => {
             .catch(error => { console.log(error) })
     }
     const handleDelete = () => {
-        console.log("hello delete")
+        fetch(`http://localhost:5000/update/${_id}`,
+            {
+                headers: {
+
+                    'Content-Type': 'application/json'
+                },
+                method: "delete",
+            })
+            .then(res => res.json())
+            .then(data => setupdate(true))
+            .catch(error => { console.log(error) })
+            navigate('/Service')
+
     }
 
     return (
